@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form class="leave-form" id="leaveForm">
+            <h1>Leave Application</h1>
+            <p class="subtitle">Employee Leave Request Form</p>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="name">Employee Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="3">
+                </div>
+                <div class="form-group">
+                    <label for="employeeid">Employee ID</label>
+                    <input type="text" id="employeeid" name="employeeid" placeholder="EMP001" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="employee@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option>HR</option><option>IT</option><option>Finance</option>
+                        <option>Marketing</option><option>Sales</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="leave-type">Leave Type</label>
+                    <select id="leave-type" name="leave-type" required>
+                        <option value="">Select Leave Type</option>
+                        <option>Casual Leave</option><option>Sick Leave</option>
+                        <option>Earned Leave</option><option>Emergency Leave</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="days">Number of Days</label>
+                    <input type="number" id="days" name="days" min="1" max="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-date">End Date</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="reason">Reason for Leave</label>
+                    <textarea id="reason" name="reason" rows="4" placeholder="Enter the reason for your leave..." required minlength="10"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="submit-btn">Submit Application</button>
+                <button type="reset" class="reset-btn">Reset Form</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
